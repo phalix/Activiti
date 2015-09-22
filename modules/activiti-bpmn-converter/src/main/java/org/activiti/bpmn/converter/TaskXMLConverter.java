@@ -37,7 +37,7 @@ public class TaskXMLConverter extends BaseBpmnXMLConverter {
   
   @Override
   protected BaseElement convertXMLToElement(XMLStreamReader xtr, BpmnModel model) throws Exception {
-    ManualTask manualTask = new ManualTask();
+    Task manualTask = new ManualTask();
     BpmnXMLUtil.addXMLLocation(manualTask, xtr);
     parseChildElements(getXMLElementName(), manualTask, model, xtr);
     return manualTask;
